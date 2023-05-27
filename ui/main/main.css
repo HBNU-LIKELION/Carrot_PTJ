@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -5,6 +12,7 @@ body {
 }
 
 .screen {
+    position: relative;
     border: 3px solid black;
     height: 880px;
     border-radius: 5px;
@@ -63,7 +71,17 @@ input {
     border: 1px solid orange;
     border-radius: 10px;
 }
+button{
+    width: 400px;
+    font-size: 15px;
+    height: 25px;
+    margin-top:510px;
+    cursor:pointer;
+    background-color: #ff9500;
+    border-radius: 5px;
 
+    font-family: 'PyeongChangPeace-Bold';
+}
 .searchbar {
 
     margin-left: 315px;
