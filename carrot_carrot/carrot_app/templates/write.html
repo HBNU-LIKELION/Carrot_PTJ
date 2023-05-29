@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/write.css' %}" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <title>게시글 작성 화면</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>✏️ 글쓰기 ✏️</h1>
+        <form method="POST" action="{% url 'write'%}">
+            {% csrf_token %}
+            <label for="title">글 제목</label>
+            <input type="text" id="title" name="title"
+            value="{{ form.title.value|default_if_none:'' }}" equired autofocus>
+
+            <label for="price">₩ 가격</label>
+            <input type="text" id="price" name="price"
+            value="{{ form.price.value|default_if_none:'' }}" required>
+
+            <label for="contents">내용</label>
+            <textarea rows="10" cols="40"  name="contents"
+            value="{{ form.content.value|default_if_none:'' }}" ></textarea>
+            
+            <label for="deadline">일시</label><br>
+
+            <div class="class-date">
+                <input type="date" id="deadline" name="start_date"
+                value="{{ form.start_date.value|default_if_none:'' }}" required> <span>부터</span>
+                <input type="date" id="deadline" name="end_date"
+                value="{{ form.end_date.value|default_if_none:'' }}" required> <span>까지</span>
+            </div>
+            <br><br>
+            <input type="submit" value="완료" class="submit-button">
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>

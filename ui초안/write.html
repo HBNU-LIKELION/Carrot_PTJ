@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="write.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+
+    <title>게시글 작성 화면</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>✏️ 글쓰기 ✏️</h1>
+        <form>
+            <label for="title">글 제목</label>
+            <input type="text" id="title" equired autofocus>
+
+            <label for="price">₩ 가격</label>
+            <input type="text" id="price" required>
+
+            <label for="contents">내용</label>
+            <input type="text" id="contents" style="text-align: top;" required>
+
+            <label for="deadline">일시</label><br>
+
+            <div class="class-date">
+                <input type="date" id="deadline" required> <span>부터</span>
+                <input type="date" id="deadline" required> <span>까지</span>
+            </div>
+
+        </form>
+        <br><br>
+        <input type="submit" value="완료" class="submit-button">
+
+    </div>
+
+</body>
+
+</html>
